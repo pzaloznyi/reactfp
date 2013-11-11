@@ -39,7 +39,6 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
     findMin(meld(h1, h2)) == min(findMin(h1), findMin(h2))
   }
  
-  /* https://class.coursera.org/reactive-001/forum/thread?thread_id=97#post-371 */
   property("meld") = forAll { (h1: H, h2: H) =>
     def heapEqual(h1: H, h2: H): Boolean =
       if (isEmpty(h1) && isEmpty(h2)) true
